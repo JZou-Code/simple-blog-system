@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="cover-block">
+        <img src="/images/animation-images/cover3.jpg" alt="" class="card" id="card1">
+        <img src="/images/animation-images/cover2.jpg" alt="" class="card" id="card2">
+        <img src="/images/animation-images/cover1.jpg" alt="" class="card" id="card3">
+    </div>
+    <div class="register-content">
+        <form action="/account/register" method="post">
+            <a href="/">
+                <img id="header" src="/images/header-login.jpg" alt="">
+            </a>
+            <input type="text" name="username" id="regname" placeholder="Username" maxlength="16" minlength="5" required><br>
+            <span id="validate-msg"></span><br>
+            <input type="password" name="password" id="new-password" placeholder="Choose Password" maxlength="20" minlength="8" required><br>
+            <input type="password" name="confirm" id="confirm" placeholder="Re-enter Password" maxlength="20" minlength="8" required><br>
+            <span id="match-password"></span><br>
+            <input type="text" name="fname" id="fname" placeholder="First Name" pattern="[A-Za-z]+" title="Only allow letters" required><br>
+            <input type="text" name="lname" id="lname" placeholder="Last Name" pattern="[A-Za-z]+" title="Only allow letters" required><br>
+<!--            <input type="date" name="birth" id="birth" placeholder="Password" title="Date of Birth" required><br>-->
+            <input type="text" 
+                   id="birth" 
+                   placeholder="Date of Birth" 
+                   name="birth" 
+                   required 
+                   autocomplete="off"
+                   data-input><br>
+            <textarea name="description" id="description" placeholder="Self Introduction" rows="5" maxlength="100"></textarea><br>
+            <div id="remaining">100/100</div>
+            <button class="disabled" id="keyBtn" disabled>Sign up</button>
+        </form>
+        <div id="jump-login">
+            <span>Have an account?</span>
+            <a href="/account/login">Please log in</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div id="edit-profile">
+    <form action="/api/profile/change-avatar" method="post">
+        <img id="avatar" src="{{user.avatar_path}}" alt="">
+        <input type="hidden" name="selected-avatar" id="selected-avatar" value="">
+        <div id="select-area">
+            <div class="img-line" id="first-line">
+                <img class="avatar" src="/images/avatars/avatar-default.jpg" alt="">
+                <img class="avatar" src="/images/avatars/avatar1.jpg" alt="">
+                <img class="avatar" src="/images/avatars/avatar2.jpg" alt="">
+            </div>
+            <div class="img-line" id="second-line">
+                <img class="avatar" src="/images/avatars/avatar3.jpg" alt="">
+                <img class="avatar" src="/images/avatars/avatar4.jpg" alt="">
+                <img class="avatar" src="/images/avatars/avatar5.jpg" alt="">
+            </div>
+            <div class="img-line" id="third-line">
+                <img class="avatar" src="/images/avatars/avatar6.jpg" alt="">
+                <img class="avatar" src="/images/avatars/avatar7.jpg" alt="">
+                <img class="avatar" src="/images/avatars/avatar8.jpg" alt="">
+            </div>
+        </div>
+        <button class="saveBtn">Save</button>
+    </form>
+    <div class="line-area">
+        <div class="line">
+            <span class="area-title">Edit Profile</span>
+            <form action="/api/profile/edit-profile" method="post">
+                <input type="text" name="username" id="regname" value="{{user.username}}" maxlength="16" minlength="5"
+                    required><br>
+                <span id="validate-msg"></span><br>
+                <input type="text" name="fname" id="fname" value="{{user.first_name}}" pattern="[A-Za-z]+" title="Only allow letters" required><br>
+                <input type="text" name="lname" id="lname" value="{{user.last_name}}" pattern="[A-Za-z]+" title="Only allow letters" required><br>
+                <!--                    <input type="date" name="birth" id="birth" placeholder="Password" title="Date of Birth"-->
+                <!--                           required><br>-->
+                <input type="text" 
+                       id="birth" 
+                       value="{{user.birth}}" 
+                       name="birth" 
+                       required 
+                       autocomplete="off"
+                       data-input><br>
+                <textarea name="description" id="description" placeholder="" rows="5"
+                    maxlength="100">{{user.description}}</textarea><br>
+                <div id="remaining">100/100</div>
+                <button id="saveBtn">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="line-area">
+        <div class="line">
+            <span class="area-title">Change Password</span>
+            <form action="/api/profile/change-pwd" method="post">
+                <input type="password" name="password" id="new-password" placeholder="Choose Password" maxlength="20"
+                    minlength="8" required><br>
+                <input type="password" name="confirm" id="confirm" placeholder="Re-enter Password" maxlength="20"
+                    minlength="8" required><br>
+                <span id="match-password"></span><br>
+                <button class="disabled" id="keyBtn" disabled>Confirm</button>
+            </form>
+        </div>
+    </div>
+    <a class="back-link" href="/profile">
+        <button class="back-button">Back</button>
+    </a>
+</div>

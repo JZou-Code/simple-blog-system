@@ -1,0 +1,46 @@
+<div id="profile">
+    <div id="avatar-container">
+        <div class="div-wrapper">
+            <img id="avatar" src="{{user.avatar_path}}" alt="">
+        </div>
+        <div class="div-wrapper">{{user.username}}</div>
+    </div>
+    <div id="top-button-container">
+        <a class="top-button-link" href="/profile/edit">
+            <div class="top-button" id="editBtn">Edit Profile</div>
+        </a>
+        <div class="top-button top-button-link" id="deleteBtn">Delete Account</div>
+    </div>
+    <div class="line-area">
+        <div class="line">
+            <span class="area-title">My Profile</span>
+            <div class="grid-container">
+                <div class="basic-info info-title">First Name: </div>
+                <div class="basic-info">{{user.first_name}}</div>
+                <div class="basic-info info-title">Last Name: </div>
+                <div class="basic-info">{{user.last_name}}</div>
+                <div class="basic-info info-title">Date of Birth: </div>
+                <div class="basic-info">{{user.birth}}</div>
+                <div class="basic-info info-title">About Me: </div>
+                <div class="basic-info">{{user.description}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="line-area">
+        <div class="line">
+            <span class="area-title">More</span>
+            <div class="function-container">
+                <a class="function-link" href="/profile/my-articles?from=B">
+                    <div class="function-button">My Articles</div>
+                </a>
+                <a class="function-link" href="/profile/my-likes?from=B">
+                    <div class="function-button">My Likes</div>
+                </a>
+            </div>
+            <a class="function-link" href="/">
+                <div class="function-button">Back</div>
+            </a>
+        </div>
+    </div>
+
+</div>

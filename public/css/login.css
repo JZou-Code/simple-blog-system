@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-block {
+    width: 445px;
+    height: 630px;
+    position: relative;
+    margin-right: 5%;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+/*.register-content {*/
+/*    padding: 0 15px;*/
+/*    height: 850px;*/
+/*    margin-left: 5%;*/
+/*    border: 1px solid rgb(219, 219, 219);*/
+/*    box-shadow: 5px 5px 5px rgb(219, 219, 219);*/
+/*}*/
+
+.login-content,
+.register-content {
+    padding: 0 0.9em 100px 0.9em;
+    height: auto;
+    margin-left: 5%;
+    border: 1px solid rgb(219, 219, 219);
+    box-shadow: 5px 5px 5px rgb(219, 219, 219);
+    max-width: 380px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form {
+    padding: 18px;
+}
+
+input {
+    line-height: 35px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding-left: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#regname {
+    margin-bottom: 0;
+}
+
+#validate-msg, #match-password {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#match-password {
+    color: red;
+}
+
+#confirm{
+    margin-bottom: 0;
+}
+
+.flatpickr-wrapper {
+    width: 100%;
+}
+
+.form-control:hover {
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#loginBtn, #keyBtn {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    background-color: rgb(255, 201, 1);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: none;
+    color: black;
+}
+
+#header {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+}
+
+#jump-login, #jump-register {
+    text-align: center;
+}
+
+#remaining{
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+
+button:hover {
+    box-shadow: 0 0 2px 2px rgb(219, 219, 219);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+a {
+    color: rgb(255, 201, 1);
+}
+
+#wrong-message{
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}
+
+.disappear {
+    /* display: none; */
+    opacity: 0;
+}
+
+.disabled {
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 880px) and (min-width: 601px){
+    .cover-block{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .cover-block{
+        display: none;
+    }
+    *{
+        font-size: 12px;
+    }
+}

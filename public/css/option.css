@@ -1,0 +1,137 @@
+* {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.title-wrapper:hover {
+    cursor: pointer;
+    /* font-size: 1.03em; */
+    transform: scale(1.1);
+    transition: all 0.1s linear;
+    color: orange;
+}
+
+.title-wrapper:active {
+    font-size: 1em;
+    color: rgb(251, 200, 1);
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header,
+.user-info-container,
+.articles-container {
+    width: 100%;
+}
+
+#header-image {
+    width: 100%;
+}
+
+.user-info-container {
+    text-align: center;
+    margin: 2em 0;
+}
+
+#avatar {
+    width: 5em;
+    border: 1px solid black;
+    border-radius: 5em;
+}
+
+#username {
+    font-size: 1.6em;
+    color: orange;
+}
+
+.line-area {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid rgb(255, 201, 1);
+    position: relative;
+}
+
+.line .area-title {
+    position: absolute;
+    top: -0.7em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+.articles-container {
+    padding: 0 3%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(255, 201, 1);
+}
+
+.single-article-wrapper {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+.single-article-wrapper:last-child {
+    border: none;
+}
+
+.time-wrapper {
+    font-size: 0.8em;
+    color: gray;
+}
+
+#back-link {
+    display: block;
+    width: 5em;
+    border-radius: 5em;
+    font-size: 1.2em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    background-color: rgb(255, 201, 1);
+    margin: 1em auto;
+}
+
+#back-link:hover {
+    box-shadow: 0 0 2px 2px rgb(219, 219, 219);
+    cursor: pointer;
+}
+
+#back-link:active{
+    box-shadow: none;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 2vw;
+    }
+}

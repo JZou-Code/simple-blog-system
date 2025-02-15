@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MewMent</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <script src="/js/home.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        {{{body}}}
+        <div class="header" id="area2">
+            <a href="/"><img id="web-title" src="/images/header-home.jpg" alt="mewment"></a>
+        </div>
+        <div class="sort-area" id="area5">
+            <div id="sorter-gt-600">
+                <label for="multi-sorter-1" id="multi-sort-label">Sort By: </label>
+                <select name="title" class="multi-sorter" id="multi-sorter-1">
+                    <option value="default" selected="true">Article Title</option>
+                    <option value="title@Asc">Ascending</option>
+                    <option value="title@Desc">Descending </option>
+                </select>
+                <select name="username" class="multi-sorter" id="multi-sorter-2">
+                    <option value="default" selected="true">Author</option>
+                    <option value="username@Asc">Ascending</option>
+                    <option value="username@Desc">Descending </option>
+                </select>
+                <select name="username" class="multi-sorter" id="multi-sorter-3">
+                    <option value="default" selected="true">Last Edit</option>
+                    <option value="updated_time@Asc">Ascending</option>
+                    <option value="updated_time@Desc">Descending </option>
+                </select>
+            </div>
+
+            <div id="sorter-lt-600">
+                <label for="single-sorter" id="sort-label">Sort By: </label>
+                <select name="singleSorter" id="single-sorter">
+                    <option value="default" selected>Select One</option>
+                    <option value="title@Asc">Title Asc</option>
+                    <option value="title@Desc">Title Desc</option>
+                    <option value="username@Asc">Author Asc</option>
+                    <option value="username@Desc">Author Desc </option>
+                    <option value="updated_time@Asc">Updated Asc</option>
+                    <option value="updated_time@Desc">Updated Desc </option>
+                </select>
+            </div>
+        </div>
+        <div class="body-area" id="area4">
+            <div id="article-container">
+
+            </div>
+
+            <div class="line-area disappear">
+                <div class="line">
+                    <div id="bottom-message"></div>
+                </div>
+            </div>
+            <!--        <div id="bottom-message"></div>-->
+            <button id="load-more">load more</button>
+        </div>
+    </div>
+</body>
+
+</html>

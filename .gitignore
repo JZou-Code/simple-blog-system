@@ -1,0 +1,17 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.idea/
+.vscode/
+*.iml
+*.iws
+/out/
+.idea_modules/
+
+node_modules/
+jspm_packages/
+
+.env
+.env.test
+README.md

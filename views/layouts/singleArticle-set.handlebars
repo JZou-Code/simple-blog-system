@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MewMent</title>
+    <link rel="stylesheet" href="/css/singleArticle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/"><img id="header-image" src="/images/header-home.jpg" alt="header"></a>
+        </div>
+        {{#if message}}
+        <div id="fail-message">
+            {{message}}
+        </div>
+        {{/if}}
+        <div class="article-container">
+            <div class="line-area">
+                <div id="title" class="area-title">{{title}}</div>
+            </div>
+
+            <div class="top-row">
+                <div class="top-left">
+                    <img src="{{avatar}}" alt="author-avatar" class="author-avatar">
+                    <div class="author-name">{{username}}</div>
+                </div>
+                <div class="last-edit">{{lastEdit}}</div>
+            </div>
+
+            {{#if images}}
+            <div class="images {{layoutClass}}">
+                {{#each fullSizeImages}}
+                <a class="image-container" href="{{this.fullSize}}" target="_blank">
+                    <img class="single-image" src="{{this.thumbnail}}">
+                </a>
+                {{/each}}
+            </div>
+            {{/if}}
+
+            <div class="content-container">{{{content}}}</div>
+            <div class="like-box">
+                <div class="heart">♥</div>
+                <div class="like-num">666</div>
+            </div>
+        </div>
+        {{{body}}}
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="cover-block">
+        <img src="/images/animation-images/cover3.jpg" alt="" class="card" id="card1">
+        <img src="/images/animation-images/cover2.jpg" alt="" class="card" id="card2">
+        <img src="/images/animation-images/cover1.jpg" alt="" class="card" id="card3">
+    </div>
+    <div class="login-content">
+        <form action="/account/login" method="post">
+            <a href="/">
+                <img id="header" src="/images/header-login.jpg" alt="">
+            </a>
+            <input type="text" name="username" id="logname" placeholder="Username" maxlength="20"><br>
+            <input type="password" name="password" id="password" placeholder="Password"><br>
+            <button id="loginBtn">Log in</button>
+        </form>
+        <div id="wrong-message">{{message}}</div>
+        <div id="jump-register">
+            <span>Don't have an account?</span>
+            <a href="/account/register">Sign up</a>
+        </div>
+    </div>
+</div>
